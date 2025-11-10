@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+}
+
+:root{
+    /*FONT*/
+    --FF:"Red Hat Display", sans-serif;
+    --FW: <WEIGHT>;
+    --FS: normal;
+
+    /*Color*/
+    --CYAN: hsl(192, 37%, 48%);
+    --PURPLE: hsl(280, 46%, 65%);
+    --LIGH-BLUE: hsl(273, 75%, 66%);
+    --LIGHT-PURPLE: hsl(240, 100%, 65%);
+
+    --HEADING-COLOR: hsl(240, 21%, 20%);
+    --BODY-TEXT: hsl(240, 10%, 57%);
+    --BG-SECTION: hsl(0, 0%, 98%);
+    --PURE-WHITE: hsl(0, 0%, 100%);
+
+    /*FONT SIZE --DESKTOP*/
+    --MAIN-HEADING: 64px;
+    --PARAGRAPH: 18px;
+    --BUTTON-TEXT: 16px;
+
+    /*FONT SIZE --MOBILE*/
+    --MAIN-HEADING: 40px;
+    --PARAGRAPH: 16px;
+    --BUTTON-TEXT: 16px;
+
+    /*OTHERS*/
+    --SMALL-LABEL:16px;
+    --LETTER-SPACING: 4px;
+}
+
+body{
+    font-family: var(--FF);
+    font-weight: var(--FW);
+    font-style: var(--FS);
+    background-color: var(--PURE-WHITE);
+    color: var(--BODY-TEXT);
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meet-logo{
+    width: 90px;
+}
+
+.hero-section{
+    padding: 2rem;
+    position: relative;
+}
+
+.hero-section img{
+    width: 200px;
+}
+
+
+.hero-left{
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+.hero-right{
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+h1{
+    font-size: 64px;
+    color: var(--HEADING-COLOR);
+}
+
+h2{
+    color: var(--HEADING-COLOR);
+}
+
+.hero-section p{
+    width: 45%;
+    margin: 1.5rem auto;
+    color: var(--BODY-TEXT);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn-primary{
+    background-color: var(--CYAN);
+}
+
+.btn-primary:hover{
+    background-color: var(--LIGHT-PURPLE);
+}
+
+.btn-secondary{
+    background-color: var(--PURPLE);
+}
+
+.btn-secondary:hover{
+    background-color: var(--LIGHT-PURPLE);
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--PURE-WHITE);
+    font-weight: bolder;
+}
+
+.number-circle{
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--BODY-TEXT);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto;
+    font-weight: 700;
+    color: var(--BODY-TEXT);
+    background-color: white;
+}
+
+.gallery-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem 10%;
+}
+
+.gallery-section img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+.middle-text{
+    padding: 3rem 2rem;
+}
+
+.middle-text h3{
+    color: var(--CYAN);
+    letter-spacing: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.middle-text h2{
+    font-size: 40px;
+    margin: 1rem 0;
+    font-weight: 900;
+}
+
+.middle-text p{
+    width: 45%;
+    margin: auto;
+    font-size: 18px;
+
+}
+
+.footer{
+    position: relative;
+    background-color: var(--CYAN);
+    color: var(--PURE-WHITE);
+    padding: 4rem 2rem;
+}
+
+.footer h2{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.footer p{
+    width: 45%;
+    margin: 1.5rem auto 2rem;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn-purple{
+    background-color: var(--PURPLE);
+}
+
+.btn-purple:hover{
+    background-color: var(--LIGHT-PURPLE);
+}
+
+.download-footer{
+    position: absolute;
+
+    right: 100px;
+    top: 150px;
+}
+
+
