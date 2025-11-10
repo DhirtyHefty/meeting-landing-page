@@ -28,18 +28,18 @@ img{
     --PURE-WHITE: hsl(0, 0%, 100%);
 
     /*FONT SIZE --DESKTOP*/
-    --MAIN-HEADING: 64px;
-    --PARAGRAPH: 18px;
-    --BUTTON-TEXT: 16px;
+    --MAIN-HEADING-DESKTOP: 64px;
+    --PARAGRAPH-DESKTOP: 18px;
+    --BUTTON-TEXT-DESKTOP: 16px;
 
     /*FONT SIZE --MOBILE*/
-    --MAIN-HEADING: 40px;
-    --PARAGRAPH: 16px;
-    --BUTTON-TEXT: 16px;
+    --MAIN-HEADING-MOBILE: 40px;
+    --PARAGRAPH-MOBILE: 16px;
+    --BUTTON-TEXT-MOBILE: 16px;
 
     /*OTHERS*/
-    --SMALL-LABEL:16px;
-    --LETTER-SPACING: 4px;
+    --SMALL-LABEL-OTHERS:16px;
+    --LETTER-SPACING-OTHERS: 4px;
 }
 
 body{
@@ -86,7 +86,7 @@ header{
 }
 
 h1{
-    font-size: 64px;
+    font-size: var(--MAIN-HEADING-DESKTOP);
     color: var(--HEADING-COLOR);
 }
 
@@ -130,8 +130,7 @@ h2{
     border-radius: 20px;
     text-decoration: none;
     color: var(--PURE-WHITE);
-    font-weight: bolder;
-}
+    font-size: var(--BUTTON-TEXT-DESKTOP);}
 
 .number-circle{
     width: 60px;
@@ -180,7 +179,7 @@ h2{
 .middle-text p{
     width: 45%;
     margin: auto;
-    font-size: 18px;
+    font-size: var(--PARAGRAPH-DESKTOP);
 
 }
 
@@ -216,6 +215,43 @@ h2{
 
     right: 100px;
     top: 150px;
+}
+
+@media (max-width: 768px){
+    .hero-left, .hero-right{
+        display: none;
+    }
+
+    .hero-section p, .middle-text p, .footer p{
+        width: 90%;
+    }
+
+    .gallery-section{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 2rem 5%;
+    }
+
+    h1{
+        font-size: var(--MAIN-HEADING-MOBILE);
+    }
+
+    .middle-text h2, .footer h2{
+        font-size: var(--MAIN-HEADING-MOBILE);
+    }
+
+    .middle-text p{
+        font-size: var(--PARAGRAPH-MOBILE);
+    }
+
+    .btn{
+        font-size: var(--BUTTON-TEXT-MOBILE);
+    }
+
+    .download-footer{
+        position: static;
+        margin-top: 2rem;
+    }
 }
 
 
