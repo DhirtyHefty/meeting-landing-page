@@ -33,8 +33,8 @@ img{
     --BUTTON-TEXT-DESKTOP: 16px;
 
     /*FONT SIZE --MOBILE*/
-    --MAIN-HEADING-MOBILE: 40px;
-    --PARAGRAPH-MOBILE: 16px;
+    --MAIN-HEADING-MOBILE: 32px;
+    --PARAGRAPH-MOBILE: 12px;
     --BUTTON-TEXT-MOBILE: 16px;
 
     /*OTHERS*/
@@ -49,6 +49,8 @@ body{
     background-color: var(--PURE-WHITE);
     color: var(--BODY-TEXT);
     text-align: center;
+
+    
 }
 
 header{
@@ -126,8 +128,8 @@ h2{
 }
 
 .btn{
-    padding: 10px;
-    border-radius: 20px;
+    padding: 13px;
+    border-radius: 23px;
     text-decoration: none;
     color: var(--PURE-WHITE);
     font-size: var(--BUTTON-TEXT-DESKTOP);}
@@ -184,7 +186,9 @@ h2{
 }
 
 .footer{
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--CYAN);
     color: var(--PURE-WHITE);
     padding: 4rem 2rem;
@@ -194,6 +198,7 @@ h2{
     font-size: 40px;
     font-weight: 900;
 }
+
 
 .footer p{
     width: 45%;
@@ -211,47 +216,99 @@ h2{
 }
 
 .download-footer{
-    position: absolute;
 
-    right: 100px;
-    top: 150px;
 }
 
-@media (max-width: 768px){
-    .hero-left, .hero-right{
+    .hero-mobile{
         display: none;
+        
+
     }
 
-    .hero-section p, .middle-text p, .footer p{
-        width: 90%;
+
+@media (max-width: 768px){
+
+    body{
+        overflow-x: hidden;
+        
     }
 
-    .gallery-section{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        padding: 2rem 5%;
+     .hero-section figure{
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-mobile{
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+
+        transform: scale(1.05);
+        transform-origin: top center ;
+
+        margin-bottom: 1.5rem;
     }
 
     h1{
         font-size: var(--MAIN-HEADING-MOBILE);
+        line-height: 1.2;
+        margin-top: 1rem;
     }
 
-    .middle-text h2, .footer h2{
-        font-size: var(--MAIN-HEADING-MOBILE);
+
+
+    .hero-left, .hero-right{
+        display: none;
     }
 
-    .middle-text p{
+    .hero-section{
+        display: block;
+        padding-top: 0 ;
+    }
+
+    .hero-section p{
+        width: 90%;
         font-size: var(--PARAGRAPH-MOBILE);
     }
 
-    .btn{
-        font-size: var(--BUTTON-TEXT-MOBILE);
+    .middle-text{
+        
+        margin: 0 ;
+        padding: 0;
+    }
+
+    .gallery-section{
+        grid-template-columns: repeat(2, 1fr);
+        
+        padding: 2rem 5%;
+    }
+
+    /*
+    .hero-section,
+    .gallery-section,
+    .footer{
+        max-width: 100%;
+        overflow-x: hidden;
+    }*/
+
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 0 2rem;
+        overflow-y: hidden;
+    }
+
+    .footer p{
+        width: 90%;
+        margin: 1rem 0 2rem;
     }
 
     .download-footer{
-        position: static;
-        margin-top: 2rem;
+        margin: 0;
     }
+
+   
 }
 
 
